@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+
+  .form-box{
+    width: 500px;
+    height: 600px;
+    background-color: #393939;
+    padding: 30px;
+    color: #fff;
+    border-radius: 30px;
+  }
+  .chat-box{
+    background: #ccc;
+    border-radius: 30px;
+    width: 100%;
+    height: 88vh;
+
+    .contacts{
+        background-color: #797979;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+        height: 88vh;
+        padding: 0;
+        .contact-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-top-left-radius: 30px;
+            background-color: #1a9e1a;
+            color: #fff;
+        }
+        .contact-container{
+            scroll-behavior: smooth;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 20px;
+            .contact{
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+                background: #fff;
+                border-radius: 8px;
+                padding: 5px;
+                display: flex;
+                justify-content:flex-start;
+                .display-name{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 10px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            } 
+            
+        }
+    }
+    .messages{
+        padding: 0;
+        .message-header{
+            img{
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+            background: #1a9e1a;
+            color: #fff;
+            padding: 8px;
+            width: 867px;
+            border-top-right-radius: 30px;
+            display: flex;
+            justify-content:flex-start;
+            .display-name{
+                display: flex;
+                flex-direction: column;
+                margin: 0 10px;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+  }

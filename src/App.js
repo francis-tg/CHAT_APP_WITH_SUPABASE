@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { 
+  Container,
+  Row,
+  Col
+} from "react-bootstrap";
+import Contact from "./components/Contact";
+import ContactContainer from "./components/ContactContainer";
+import ContactHeader from "./components/ContactHeader";
+import MessageHeader from "./components/MessageHeader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <div className="chat-box mt-5">
+        <Row>
+          <Col lg={4} sm={6} className="contacts">
+            <ContactHeader username={sessionStorage.getItem("user").email}/>
+            <ContactContainer element={<Contact/>}/>
+          </Col>
+          <Col lg={8} sm={6} className="messages">
+            <MessageHeader/>
+          </Col>
+        </Row>
+      </div>
+    </Container>
   );
 }
 
